@@ -11,8 +11,8 @@ export class ListadoComponent implements OnInit{
   public auto: Auto = new Auto();
   public cadena: string = "";
   ngOnInit(): void {
-    this.dato = localStorage.getItem('tutorial');
-    let s: any = localStorage.getItem('auto');
+    this.dato = localStorage.getItem('tutorial'); //recupero la cadena
+    let s: any = localStorage.getItem('auto11'); // recupero el objeto
     this.auto = JSON.parse(s);
     console.log(this.auto.marca);
   }

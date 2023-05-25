@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  public auto = new Auto();
+  curso : string = 'Esto es Angular';
   ngOnInit(): void {
-    const auto: Auto = new Auto();
-    auto.id=1;
-    auto.marca="Volvo";
-    auto.modelo="Jetta";
-    auto.precio=20000;
-    localStorage.setItem('tutorial', 'Esto es Angular');
-    localStorage.setItem('auto', JSON.stringify(auto));
+    this.auto.id=1;
+    this.auto.marca="Volvo";
+    this.auto.modelo="Jetta";
+    this.auto.precio=20000;
+    localStorage.setItem('auto11', JSON.stringify(this.auto));
 
   }
 
